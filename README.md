@@ -3,7 +3,7 @@ This project is a clone of the AirBnB platform, implemented using Flask. It incl
 
 ![Screenshot](airbnb.jpg)
 
-## Features
+## Features 
 1. The console: Interactive console for managing the application.
 2. Web static: HTML, CSS, and JavaScript static files for the frontend.
 3. MySQL: MySQL database integration for data management.
