@@ -24,55 +24,44 @@ This project is a clone of the AirBnB platform, implemented using Flask. It incl
 * Virtualenv
 
 ## Installation
-
 1. **Clone the Repository**
-```bash
-git clone https://github.com/sainawj/airbnb_clone_v4.git
-cd airbnb_clone_v4
+    ```bash
+    git clone https://github.com/sainawj/airbnb_clone_v4.git
+    cd airbnb_clone_v4
+  
+  2. **Install Dependencies**
+     ```bash
+     pip install -r requirements.txt
+  3. **Set Up a Virtual Environment**
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+5. **Install MySQL Server**
+   ```bash
+   sudo apt-get update
+   sudo apt-get install mysql-server
+   sudo mysql_secure_installation ##secure your MySQL setup
 
-2. **Set Up a Virtual Environment**
-```bash
-python3 -m venv venv
-source venv/bin/activate
+6. **Create a MySQL Database**
+   ```bash
+   mysql -u root -p
+   CREATE DATABASE airbnb_clone;
+7. **Set Up Environment Variables**
+   Create a .env file with your database credentials:
+   ```makefile
+   FLASK_APP=app.py
+   FLASK_ENV=development
+   DATABASE_URL=mysql+pymysql://root:rootpassword@localhost/airbnb_clone
+8. **Initialize the Database**
+   Run migrations to set up the database tables:
+    ```bash
+    flask db init
+    flask db migrate
+    flask db upgrade
+9. **Start the Flask Application**
+    Run the app with:
+    ```bash
+    flask run
 
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-
-### 4. Install MySQL Server
-Install MySQL on your machine:
-```bash
-sudo apt-get update
-sudo apt-get install mysql-server
-
-After installation, secure your MySQL setup:
-```bash
-sudo mysql_secure_installation
-
-### 5. Create a MySQL Database
-Log in to MySQL and create a database for the app:
-```bash
-mysql -u root -p
-CREATE DATABASE airbnb_clone;
-
-### 6. Set Up Environment Variables
-Create a .env file with your database credentials:
-
-```makefile
-FLASK_APP=app.py
-FLASK_ENV=development
-DATABASE_URL=mysql+pymysql://root:<your_password>@localhost/airbnb_clone
-
-### 7. Initialize the Database
-Run migrations to set up the database tables:
-```bash
-flask db init
-flask db migrate
-flask db upgrade
-
-### 8. Start the Flask Application
-Run the app with:
-```bash
-flask run
 
 The application will be available at http://127.0.0.1:5000.
