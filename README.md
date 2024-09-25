@@ -1,7 +1,9 @@
 # Airbnb Clone
 This project is a clone of the AirBnB platform, implemented using Flask. It includes several components such as console interaction, web static files, MySQL integration, RESTful API, load balancing, and web infrastructure design
+
 ![Screenshot](airbnb.jpg)
-Features
+
+## Features
 1. The console: Interactive console for managing the application.
 2. Web static: HTML, CSS, and JavaScript static files for the frontend.
 3. MySQL: MySQL database integration for data management.
@@ -23,12 +25,12 @@ Features
 
 ## Installation
 
-### 1. Clone the Repository
+1. **Clone the Repository**
 ```bash
 git clone https://github.com/sainawj/airbnb_clone_v4.git
 cd airbnb_clone_v4
 
-### 2. Set Up a Virtual Environment (Optional)
+2. **Set Up a Virtual Environment**
 ```bash
 python3 -m venv venv
 source venv/bin/activate
