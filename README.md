@@ -62,6 +62,3 @@ This project is a clone of the AirBnB platform, implemented using Flask. It incl
     Run the app with:
     ```bash
     flask run
-
-
-The application will be available at http://127.0.0.1:5000.
